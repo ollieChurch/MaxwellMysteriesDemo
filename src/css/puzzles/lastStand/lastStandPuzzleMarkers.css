@@ -1,0 +1,38 @@
+.puzzleMarker-cogs {
+    top: 70%;
+    left: 10%;
+}
+
+.puzzleMarker-clock {
+    top: 10%;
+    left: 60%;
+}
+
+.puzzleMarker-crates {
+    top: 75%;
+    left: 65%;
+}
+
+.puzzleMarker-switches,
+.puzzleMarker-switchesPassword {
+    top: 80%;
+    left: 15%;
+}
+
+.puzzleMarker-flags,
+.puzzleMarker-flagsPassword {
+    top: 30%;
+    left: 10%;
+}
+
+.puzzleMarker-toolbox {
+    top: 80%;
+    left: 95%;
+}
+
+.puzzleMarker-lockedDoor {
+    top: 45%;
+    left: 85%;
+    border: none;
+    font-size: 35px;
+}

@@ -1,0 +1,62 @@
+.puzzleContainer-typewriter {
+    position: relative;
+    background-image: url(../../../images/puzzles/office/typewriter/typewriter.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    margin: .5em;
+}
+
+.typeWriterSmallScreen {
+	display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.typeWriterSmallScreen_input,
+.typeWriterSmallScreen_btn {
+	margin-bottom: 1em;
+    text-align: center;
+}
+
+.typeWriterInputDisplay {
+	position: absolute;
+    top: 10%;
+    left: 49%;
+    transform: translateX(-49%);
+    width: max-content;
+    
+    font-size: 1.25rem;
+}
+
+.typeWriterInputDisplay_input {
+	font-size: inherit;
+	border: unset;
+    border-bottom: chocolate 3px dashed;
+    background: transparent;
+    margin: 0 .2em;
+}
+
+.typeWriterSmallScreen-input {
+	border: chocolate 3px dashed;
+    border-radius: 5px;
+    font-size: 2rem;
+    background: aliceblue;
+    padding: 0 1em;
+}
+
+.puzzlePopUp_btn-typeWriterSubmit { margin-bottom: 1.75em; }
+
+
+
+@media(max-width: 850px) {
+    .typeWriterInputDisplay,
+    .typeWriterKeys { display: none; }
+    
+    .typeWriterSmallScreen { display: flex; }
+        
+    .puzzleContainer-typewriter {
+        background: transparent;
+    }
+}

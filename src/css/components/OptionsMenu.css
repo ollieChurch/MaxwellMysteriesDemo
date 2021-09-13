@@ -1,0 +1,21 @@
+.optionsMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 3rem;
+}
+
+.optionsMenu_btn {
+    font-size: 1.75rem;
+    margin-top: 1em;
+}
+
+.landing_creditsLink {
+    color: black;
+    cursor: pointer;
+}
+
+.landing_creditsLink:hover {
+    color: firebrick;
+}

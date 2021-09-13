@@ -1,0 +1,42 @@
+.puzzleMarker-portrait,
+.puzzleMarker-openPortrait {
+    top: 35%;
+    left: 30%;
+}
+
+.puzzleMarker-globe {
+    top: 60%;
+    left: 90%;
+}
+
+.puzzleMarker-book {
+    top: 55%;
+    left: 60%;
+}
+
+.puzzleMarker-sign {
+    top: 20%;
+    left: 60%;
+}
+
+.puzzleMarker-chair {
+    top: 50%;
+    left: 40%;
+}
+
+.puzzleMarker-floorTile {
+    top: 90%;
+    left: 70%;
+}
+
+.puzzleMarker-answerForm {
+    top: 69%;
+    left: 20%;
+}
+
+.puzzleMarker-librarian {
+    border: none;
+    font-size: 25px;
+    top: 30%;
+    left: 15%;
+}

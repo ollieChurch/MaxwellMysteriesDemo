@@ -1,0 +1,29 @@
+@keyframes float {
+    from {transform: translateY(0);}
+    to {transform: translateY(-5px);}
+}
+
+@keyframes slideUp {
+    from {transform: translateY(110%);}
+    to {transform: translateY(0);}
+}
+
+@keyframes slideDown {
+    from {transform: translateY(0);}
+    to {transform: translateY(110%);}
+}
+
+@keyframes slideRight {
+    from {transform: translateX(-110%);}
+    to {transform: translateX(0);}
+}
+
+@keyframes slideLeft {
+    from {transform: translateX(110%);}
+    to {transform: translateX(0);}
+}
+
+@keyframes continuousRotation {
+    from {transform: rotate(0)}
+    to {transform: rotate(360deg)}
+}

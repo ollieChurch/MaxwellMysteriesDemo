@@ -1,0 +1,75 @@
+.dartBoardContainer {
+    position: relative;
+    width: 400px;
+    height: 400px;
+/*    border: red 2px solid;*/
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
+    border-radius: 50%;
+    
+    background-image: url(../../../images/puzzles/fourJokers/dartBoard.png);
+    background-size: cover;
+    filter: sepia(.5);
+    box-shadow: 5px 5px 10px black;
+}
+.dartBoard_gridSquare {
+/*    border: black 2px solid;*/
+    height: 25px;
+    width: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dartBoard_dartImg {
+    width: 100px;
+    height: 100px;
+    filter: drop-shadow(5px 5px 5px black);
+}
+
+.dartBoard_target {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: firebrick;
+    border-radius: 50%;
+}
+
+.dartBoard_target-moving {
+    animation-name: horizontal, vertical;
+    animation-duration: 1s, 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.dartBoard_target-horizontal {
+    animation-duration: 5s, 1s;
+}
+
+@keyframes horizontal {
+    from {left: 0;}
+    to {left: calc(100% - 25px);}
+}
+
+@keyframes vertical {
+    from {top: 0;}
+    to {top: calc(100% - 25px);}
+}
+
+.dartBoard_controls {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+
+.dartBoard_controls p {
+    text-align: left;
+}
+
+.dartBoard_btn {
+    font-size: 1.5rem;
+    justify-self: flex-end;
+}

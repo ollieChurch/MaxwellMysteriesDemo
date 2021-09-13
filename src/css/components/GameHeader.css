@@ -1,0 +1,28 @@
+header {
+    grid-area: head;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+    z-index: 1;
+    margin-bottom: .5em;
+}
+
+.header_link {
+    width: max-content;
+	font-size: 1.1rem;
+    margin: .5em auto;
+    cursor: pointer;
+    transition: transform 0.5s;
+    text-decoration: none;
+    color: inherit;
+}
+
+.header_link:hover {
+    transform: scale(1.5);
+    color: gold;
+}
+
+.header_link-landing:hover { color: firebrick; }

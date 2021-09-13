@@ -1,0 +1,71 @@
+.simonContainer {
+    box-shadow: 5px 5px 10px black;
+    filter: sepia(.5);
+}
+
+.simon_mainPuzzle {
+    display: flex;
+    align-items: center;
+    padding: 1em;
+}
+
+.simon_input,
+.simon_instruction {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    border-left: 5px dashed black;
+    border-right: 5px dotted black;
+    border-radius: 10%;
+    padding: 0 .5em;
+}
+
+.simon_revolve {
+    background: rgba(171, 156, 123, .75);
+    background-image: url(../../../images/theme/wood-background.jpg);
+    background-blend-mode: soft-light;
+    filter: drop-shadow(0 0 20px black);
+    border-radius: 50%;
+    padding: calc(1.5em + 5px) 1em;
+    margin-left: 1em;
+    transition: transform 1.5s;
+}
+
+.simon_revolve-invisible {
+    background: unset;
+    filter: unset;
+    margin-left: 0;
+}
+
+.simon_instruction_light,
+.simon_input_btn {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    padding: 0;
+    outline: none;
+}
+
+.simon_instruction_light {
+	border: 5px groove rgba(171, 156, 123, 1);
+    background: rgba(171, 156, 123, .65);
+    filter: drop-shadow(2.5px 2.5px 5px black);
+}
+
+.simon_input_btn {
+    filter: drop-shadow(1px 1px 2.5px black);
+}
+
+.placeholder {
+    visibility: hidden;
+}
+
+.simon_indicatorBox {
+    display: flex;
+    width: max-content;
+    margin: .5em auto 1em auto;
+}
+
+.simon_indicatorBox * {
+    border: dotted 4px black;
+}

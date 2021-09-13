@@ -1,0 +1,86 @@
+.soundMachineContainer {
+    padding: .75em;
+    filter: sepia(.75);
+    background-blend-mode: lighten;
+}
+
+.soundMachine_buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px 0;
+    margin-bottom: 1em;
+    border: 3px dashed rgba(110, 78, 25, 0.6);
+    padding: .25em;
+    justify-items: center;
+}
+
+.soundMachine_buttons-btn {
+    padding: 0;
+    width: 80%;
+}
+
+.soundMachine_buttons-btn:disabled {
+    background: black;
+    cursor: default;
+    opacity: 0.65;
+}
+
+.soundMachine_buttons-btn img {
+    max-width: 100%;
+    max-height: 60px;
+    filter: invert(100%);
+}
+
+.soundMachine_power {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.atomicIcon {
+    font-size: 2rem;
+}
+
+.soundMachine_power_indicatorContainer {
+    font-size: 1rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.soundMachine_power_indicatorContainer p {
+    margin: 0 .5em;
+}
+
+.soundMachine_power_indicator {
+    background: firebrick;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.soundMachine_power_form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.soundMachine_power_form input {
+    margin: 0 1em 0 1em;
+    text-align: left;
+    padding: .1em .25em;
+}
+
+@media (max-width: 700px) {
+    .puzzlePopUp_text-soundMachine {
+        display: none;
+    }
+    
+    .soundMachine_power_indicatorContainer {
+        margin-bottom: 1em;
+    }
+}

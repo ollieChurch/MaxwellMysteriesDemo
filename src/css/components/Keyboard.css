@@ -1,0 +1,18 @@
+.typeWriterKeys,
+.typeWriterKeys_row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.typeWriterKeys {
+    flex-direction: column;
+}
+
+.typeWriterKey {
+	font-size: 1rem;
+    margin: .15em .1em;
+    padding: .65em;
+    border-radius: 50%;
+    outline: none;
+}

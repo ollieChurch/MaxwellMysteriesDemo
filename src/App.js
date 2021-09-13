@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import { Switch, Route } from 'react-router-dom'
+import './css/App.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import {UnmountContextProvider} from './context/UnmountContext'
+import {BackgroundMusicProvider} from './context/BackgroundMusicContext'
+import {PuzzleChangeProvider} from './context/PuzzleChangeContext'
+
+import LandingPage from './pages/landingPage/LandingPage'
+import LocationPage from './pages/locationPage/LocationPage'
+
+function App() {        
+    return (
+        <BackgroundMusicProvider>
+            <Switch>
+                <Route exact path="/">
+                  <LandingPage />
+                </Route>
+                <Route exact path="/location/:locationId/investigate">
+                    <PuzzleChangeProvider>
+                        <UnmountContextProvider>
+                            <LocationPage />
+                        </UnmountContextProvider>
+                    </PuzzleChangeProvider>
+                </Route>
+            </Switch>
+        </BackgroundMusicProvider>
+    )
 }
 
-export default App;
+export default App

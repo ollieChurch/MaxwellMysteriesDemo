@@ -1,0 +1,62 @@
+.numberLock {
+    display: grid;
+    grid-gap: 1em;
+    align-items: center;
+    justify-items: center;
+    padding: 2em;
+    filter: sepia();
+    background-blend-mode: lighten;
+}
+
+.inputsContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.numberInput {
+    display: flex;
+    flex-direction: column;
+}
+
+.numberInput_display {
+    padding: .25em;
+    font-size: 3rem;
+    margin: .15em .1em .3em .1em;
+}
+
+.numberInput_btn {
+    background: unset;
+    border-radius: 0;
+    padding: unset;
+    width: 0;
+	height: 0;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-bottom: 30px solid black;
+    border-top: unset;
+    align-self: center;
+    
+    animation-name: float;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+.numberInput_btn-down {
+    animation-direction: alternate-reverse;
+	border-bottom: unset;
+    border-top: 30px solid black;
+    
+}
+
+.numberInput_btn:hover,
+.numberInput_btn:focus {
+    background: unset;
+    border-bottom-color: firebrick;
+    border-top-color: firebrick;
+}
+
+.numberLock_submit {
+    font-size: 1.5rem;
+}

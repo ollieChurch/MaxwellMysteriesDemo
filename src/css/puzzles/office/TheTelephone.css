@@ -1,0 +1,96 @@
+.telephone_smallScreen { 
+    display: none;
+    margin-bottom: 1em;
+}
+
+.puzzlePopUp_cntrls-telephone {
+    width: 800px;
+    height: 500px;
+}
+.telephoneImage { width: 800px; }
+
+.telephoneControl {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    position: absolute;
+    top: 19.5%;
+    left: 48.5%;
+    
+    background-image: url(../../../images/puzzles/office/telephone/PhoneMiddleThinBorder.png);
+    background-size: cover;
+    transition: transform 2s;
+}
+
+.phoneButton {
+	padding: 0;
+    margin: 0;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    
+    background: rgba(110, 78, 25, 0.2);
+    border: 3px groove rgba(110, 78, 25, 0.7);
+    color: #6E4E19;
+    font-size: 1.5rem;  
+    outline: none;
+}
+
+.phoneButton:hover, 
+.phoneButton:focus {
+    color: white;
+}
+
+.placeholderPhoneButton {
+    visibility: hidden;
+}
+
+.phoneNumberContainer {
+    position: absolute;   
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.phoneNumberContainer-2 { transform: rotate(30deg); }
+.phoneNumberContainer-3 { transform: rotate(60deg); }
+.phoneNumberContainer-4 { transform: rotate(90deg); }
+.phoneNumberContainer-5 { transform: rotate(120deg); }
+.phoneNumberContainer-6 { transform: rotate(150deg); }
+
+.phoneButton-2,
+.phoneButton-8 { transform: rotate(-30deg); }
+
+.phoneButton-1,
+.phoneButton-7 { transform: rotate(-60deg); }
+
+.phoneButton-6 { transform: rotate(-90deg); }
+
+.phoneButton-5 { transform: rotate(-120deg); }
+
+.phoneButton-0,
+.phoneButton-4 { transform: rotate(-150deg); }
+
+.phoneNumberDisplay {
+    font-size: 3rem;
+}
+
+@media(max-width: 875px) {
+    .telephoneControl,
+    .telephoneImage { display: none; }
+    
+    .telephone_smallScreen { display: block; }
+    
+    .puzzlePopUp_cntrls-telephone {
+        width: 100%;
+    }
+    
+    .phoneNumberDisplay {
+        display: none;
+    }
+}

@@ -1,12 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import {BrowserRouter} from 'react-router-dom'
+import {AudioPlayerProvider} from 'react-use-audio-player'
+
+import {PlayerStatsProvider} from './context/PlayerStatsContext'
+
+import './css/index.css'
+import App from './App'
+import reportWebVitals from './reportWebVitals'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <BrowserRouter>
+        <PlayerStatsProvider>
+            <AudioPlayerProvider>
+                <App /> 
+            </AudioPlayerProvider>
+        </PlayerStatsProvider>
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 );

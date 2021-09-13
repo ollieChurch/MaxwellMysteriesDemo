@@ -1,0 +1,93 @@
+.pipesContainer {
+    position: relative;
+    background-image: url(../../../images/puzzles/laboratory/pipes.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 450px;
+    height: 450px;
+    filter: drop-shadow(5px 5px 5px black)
+}
+
+.pipes_handle {
+    position: absolute;
+    top: 65px;
+    width: 200px;
+    height: 30px;
+    text-align: right;
+    transform: rotate(-33.75deg);
+    outline: none;
+    transition: transform 1s;
+}
+
+.pipes_handle:hover,
+.pipes_handle:focus {
+    background: unset;
+}
+
+.pipes_handle-on {
+    transform: rotate(33.75deg)
+}
+
+.pipes_handle-0 {
+    left: -75px;
+}
+
+.pipes_handle-1 {
+    left: 120px;
+}
+
+.pipes_handle-2 {
+    left: 320px;
+}
+
+.pipes_handleImg {
+    width: 55%;
+    align-self: right;
+    height: 100%;
+    cursor: pointer;
+}
+
+.pipes_handleImg:hover {
+    filter: drop-shadow(0 0 10px gold);
+}
+
+.pipes_mixingControl {
+    position: absolute;
+    bottom: 10px;
+    left: 51.5%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: 185px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em 0 1em 0;
+}
+
+.pipes_valueDisplays {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.pipes_valueDisplays input {
+	padding: .25em;
+    border-radius: 2px;
+}
+
+.pipes_buttons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.pipes_buttons button {
+    font-size: 1rem;
+}
+
+
+

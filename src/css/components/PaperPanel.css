@@ -1,0 +1,9 @@
+.paperPanel {
+    background: #e3dcb8;
+    background-image: url(../../images/theme/paper-background.jpg);
+    background-size: cover;
+    box-shadow: 5px 5px 10px black;
+    border-radius: 5px;
+    
+    color: black;
+}

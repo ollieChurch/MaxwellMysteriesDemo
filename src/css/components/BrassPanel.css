@@ -1,0 +1,39 @@
+.brassPanel {
+    position: relative;
+    background: #b88d41;
+    background-image: url(../../images/theme/brass-background.jpg);
+    background-size: cover;
+	background-blend-mode: luminosity;
+    
+    border: groove 10px #b88d41;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px black;
+    
+    color: aliceblue;
+}
+
+.brassPanel_screw {
+    position: absolute;
+	width: 20px;
+}
+
+.brassPanel_screw-middleLeft,
+.brassPanel_screw-middleRight { 
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.brassPanel_screw-middleLeft { left: 2px; }
+.brassPanel_screw-middleRight { right: 2px; }
+
+.brassPanel_screw-topLeft,
+.brassPanel_screw-topRight { top: 2px; }
+
+.brassPanel_screw-bottomLeft,
+.brassPanel_screw-bottomRight { bottom: 2px; }
+
+.brassPanel_screw-topLeft,
+.brassPanel_screw-bottomLeft { left: 2px; }
+
+.brassPanel_screw-topRight, 
+.brassPanel_screw-bottomRight { right: 2px; }

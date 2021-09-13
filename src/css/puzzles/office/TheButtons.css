@@ -1,0 +1,26 @@
+.buttonsBox {
+    border: inset 5px rgba(110, 78, 25, 1);
+    background: rgba(110, 78, 25, 0.45);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1em;
+    padding: 2em;
+    border-radius: 3px;
+}
+
+.buttons-btn {
+    width: 100px;
+    height: 100px;
+    background: rgba(110, 78, 25, 0.8);
+    font-size: 5rem;
+    padding: 0;
+    text-align: center;
+    color: rgba(110, 78, 25, 1);
+    border: ridge 3px black;
+    box-shadow: 5px 5px 10px black;
+    outline: none;
+}
+
+.buttons-btn:active {
+    box-shadow: unset;
+}

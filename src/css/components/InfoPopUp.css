@@ -1,0 +1,68 @@
+.infoPopUpContainer {
+/*    visibility: hidden;*/
+}
+
+.infoPopUp_background {
+	position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: black;
+    opacity: 0.5;
+}
+
+.infoPopUp {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    z-index: 500;
+    
+    width: 80%;
+    min-height: 30%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    border: 3px groove black;
+    
+    text-align: center;
+    font-size: 1.75rem;
+    padding: 2em;
+    color: firebrick;
+}
+
+.infoPopUp-returnToMap { flex-flow: row wrap; }
+
+.infoPopUp_btn {
+    font-size: 1.25rem;
+	margin: 2em 1.5em 0 1.5em;
+    max-width: 150px;
+}
+
+.infoPopUp_close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    font-weight: 900;
+    color: black;
+    cursor: pointer;
+    z-index: 5;
+    background: transparent;
+    border: unset;
+    padding: 0;
+}
+
+.infoPopUp_close:hover,
+.infoPopUp_close:focus {
+    color: firebrick;
+    background: transparent;
+}
+
+@media(max-width: 700px) { 
+    .infoPopUp { position: fixed; } 
+}

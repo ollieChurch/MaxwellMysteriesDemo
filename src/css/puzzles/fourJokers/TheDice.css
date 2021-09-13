@@ -1,0 +1,16 @@
+.diceContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    filter: sepia(.75)
+}
+
+.dice {
+    font-size: 10rem;
+    color: dimgray;
+}
+
+.dice * {
+    filter: drop-shadow(2px 2px 5px black);
+}
