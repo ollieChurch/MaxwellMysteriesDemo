@@ -2,7 +2,7 @@ import {useState, useContext} from 'react'
 import {useAudioPlayer} from 'react-use-audio-player'
 import '../../css/pages/ClueSystem.css'
 
-import clueSfxFile from '../../audio/audioFiles/sfx/telegram.mp3'
+import clueSfxFile from '../../audio/sfx/telegram.mp3'
 
 import {LocationPuzzlesContext} from '../../context/LocationPuzzlesContext'
 import {PuzzleChangeContext} from '../../context/PuzzleChangeContext'

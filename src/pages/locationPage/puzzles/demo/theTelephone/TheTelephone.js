@@ -2,7 +2,7 @@ import React, {useState, useContext, useEffect} from 'react'
 import {useAudioPlayer, useAudioPosition} from 'react-use-audio-player'
 import '../../../../../css/puzzles/office/TheTelephone.css'
 
-import phoneAudio from '../../../../../audio/audioFiles/sfx/rotaryPhone.mp3'
+import phoneAudio from '../../../../../audio/sfx/rotaryPhone.mp3'
 import keyImg from '../../../../../images/puzzles/office/key.png'
 
 import {UnmountContext} from '../../../../../context/UnmountContext'

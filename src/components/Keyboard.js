@@ -2,7 +2,7 @@ import React, {useEffect, useContext} from 'react'
 import {useAudioPlayer} from 'react-use-audio-player'
 import '../css/components/Keyboard.css'
 
-import typewriterSFX from '../audio/audioFiles/sfx/typewriterSFX.mp3'
+import typewriterSFX from '../audio/sfx/typewriterSFX.mp3'
 
 import {UnmountContext} from '../context/UnmountContext'
 

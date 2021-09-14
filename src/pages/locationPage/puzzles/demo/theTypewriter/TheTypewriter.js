@@ -2,7 +2,7 @@ import React, {useState, useEffect, useContext} from 'react'
 import {useAudioPlayer, useAudioPosition} from 'react-use-audio-player'
 import '../../../../../css/puzzles/office/TheTypewriter.css'
 
-import typewriterSFX from '../../../../../audio/audioFiles/sfx/typewriterSFX.mp3'
+import typewriterSFX from '../../../../../audio/sfx/typewriterSFX.mp3'
 
 import {UnmountContext} from '../../../../../context/UnmountContext'
 import {LocationPuzzlesContext} from '../../../../../context/LocationPuzzlesContext'

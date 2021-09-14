@@ -2,7 +2,7 @@ import React, {useState, useContext} from 'react'
 import { useAudioPlayer } from 'react-use-audio-player'
 import '../css/components/InfoPopUp.css'
 
-import paperSFX from '../audio/audioFiles/sfx/paper.mp3'
+import paperSFX from '../audio/sfx/paper.mp3'
 import {UnmountContext} from '../context/UnmountContext'
 
 import PaperPanel from './PaperPanel'
