@@ -1,5 +1,5 @@
 import {useState, useContext} from 'react'
-import '../../css/puzzles/office/OfficePuzzleMarkers.css'
+import '../../css/puzzles/office/DemoPuzzleMarkers.css'
 import '../../css/puzzles/library/LibraryPuzzleMarkers.css'
 import '../../css/puzzles/laboratory/laboratoryPuzzleMarkers.css'
 import '../../css/puzzles/fourJokers/fourJokersPuzzleMarkers.css'

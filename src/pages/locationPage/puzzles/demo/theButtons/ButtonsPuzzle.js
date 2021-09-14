@@ -5,17 +5,19 @@ import answerData from '../../answerData'
 
 function ButtonsPuzzle({setPuzzleSolved}) {
     const [answer] = useState(answerData.buttons)
-    const [playerInput, setPlayerInput] = useState('')
+    const [playerInput, setPlayerInput] = useState([])
+    const [buttonSymbols] = useState(["rook", "bishop", "pawn", "knight", "king", "queen"])
     const {setWrongAnswer, flashIndicator, indicatorFilled, updateIndicatorFilled} = useAnswerIndicators(answer)
     
     function handleClick(value) {
         updateIndicatorFilled(playerInput) 
-        setPlayerInput(prevInput => prevInput + value)
+        const newArr = [...playerInput, value]
+        setPlayerInput(newArr)
     }
     
     useEffect(() => {
         if (playerInput.length >= answer.length) {
-            if (playerInput === answer) {
+            if (playerInput.join() === answer.join()) {
                 setPuzzleSolved(true)
             } else {
                 setWrongAnswer(true)
@@ -29,44 +31,37 @@ function ButtonsPuzzle({setPuzzleSolved}) {
     return (
         <>
             <div className='buttonsBox'>
-                    <button className='buttons-btn' onClick={() => handleClick('w')}>
-                        <i className="fas fa-expand"></i>
-                    </button>
-                    <button className='buttons-btn' onClick={() => handleClick('o')}>
-                        <i className="fas fa-expand"></i>
-                    </button>
-                    <button className='buttons-btn' onClick={() => handleClick('n')}>
-                        <i className="fas fa-expand"></i>
-                    </button>
-                    <button className='buttons-btn' onClick={() => handleClick('d')}>
-                        <i className="fas fa-expand"></i>
-                    </button>
-                    <button className='buttons-btn'onClick={() => handleClick('e')}>
-                        <i className="fas fa-expand"></i>
-                    </button>
-                    <button className='buttons-btn' onClick={() => handleClick('r')}>
-                        <i className="fas fa-expand"></i>
-                    </button>
-                </div>
+                {buttonSymbols.map((symbol, index) => {
+                    return (
+                        <button 
+                            key={index} 
+                            className='buttons-btn' 
+                            onClick={() => handleClick(symbol)}
+                        >
+                            <i className={`fas fa-chess-${symbol}`}></i>
+                        </button>
+                    )
+                })}
+            </div>
 
-                <div className='indicatorBox'>
-                    {indicatorFilled.map((indicator, index) => {
-                        return (
-                            <div
-                            key={index}
-                            className={`
-                                indicator 
-                                ${indicator && 'indicator-filled'}
-                                ${flashIndicator && 'indicator-wrong'}
-                            `}
-                            ></div> 
-                        )
-                    })}
-                </div>
+            <div className='indicatorBox'>
+                {indicatorFilled.map((indicator, index) => {
+                    return (
+                        <div
+                        key={index}
+                        className={`
+                            indicator 
+                            ${indicator && 'indicator-filled'}
+                            ${flashIndicator && 'indicator-wrong'}
+                        `}
+                        ></div> 
+                    )
+                })}
+            </div>
 
-                <p className="puzzlePopUp_text">
-                    Human nature requires us to press buttons we know we should not.
-                </p>
+            <p className="puzzlePopUp_text">
+                Human nature requires us to press buttons we know we should not.
+            </p>
         </>
     )
 }

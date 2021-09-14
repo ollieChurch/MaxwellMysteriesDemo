@@ -1,0 +1,42 @@
+.puzzleMarker-typewriter {
+    top: 57%;
+    left: 55%;
+}
+
+.puzzleMarker-bookcase {
+    top: 55%;
+    left: 80%;
+}
+
+.puzzleMarker-buttons {
+    top: 32%;
+    left: 95%;
+}
+
+.puzzleMarker-filing {
+	top: 45%;
+    left: 5%;
+}
+
+.puzzleMarker-telephone {
+	top: 70%;
+    left: 35%;
+}
+
+.puzzleMarker-telescope {
+    top: 23%;
+    left: 87%;
+}
+
+.puzzleMarker-flags {
+    top: 25%;
+    left: 55%;
+}
+
+.puzzleMarker-drawer {
+    border: none;
+    font-size: 25px;
+    top: 82%;
+    left: 27%;
+}
+

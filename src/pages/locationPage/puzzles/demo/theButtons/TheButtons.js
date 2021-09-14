@@ -16,8 +16,8 @@ function TheButtons() {
             setUpdated(true)
             updatePuzzleList({
                 type: 'SOLVE_PUZZLE',
-                complete: ['buttons', 'bookcase'],
-                newPuzzles: ['voiceRecorder']
+                complete: ['buttons', 'flags'],
+                newPuzzles: ['filing']
             })
             updateLocationImg()
         }
@@ -27,8 +27,8 @@ function TheButtons() {
         <div className="puzzleContainer">
             {puzzleSolved ?
                 <PuzzleReward
-                    imgAlt="the bookcase from the office"
-                    text="With the grinding of gears and scraping of wood, the Professor's bookcase begins to move."
+                    imgAlt="the filing cabinet from the office"
+                    text="Across the room, the filing cabinet suddenly springs open."
                 /> :
                 <ButtonsPuzzle setPuzzleSolved={setPuzzleSolved}/>
             }

@@ -1,13 +1,11 @@
-import React from 'react'
-import booksImg from '../../../../images/puzzles/office/books.png'
+import booksImg from '../../../../images/puzzles/demo/demoBooks.png'
 
 function TheBookcase() {
     return (
         <div className="puzzleContainer">
-               <img className="puzzlePopUp_img" src={booksImg} alt="a collection of books in the same series" />
-
+            <img className="puzzlePopUp_img" src={booksImg} alt="a collection of books with coloured markings" />
             <p className="puzzlePopUp_text">
-                Judging by the dust on this bookcase, these books have been moved recently.
+                These books are fixed in place. Strange that they don't have titles.
             </p>     
         </div>
     )

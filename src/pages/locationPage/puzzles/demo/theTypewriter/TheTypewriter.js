@@ -28,7 +28,8 @@ function TheTypewriter() {
         if (unmount.waiting) { 
             playing ? stop() : updateUnmount({name: 'safe', state: true})
         }
-    }, [unmount, playing, stop, updateUnmount])
+    // eslint-disable-next-line
+    }, [unmount, playing, updateUnmount])
     
     useEffect(() => {
         if (puzzleSolved && !updated) {
@@ -38,8 +39,8 @@ function TheTypewriter() {
             updateUnmount({name: 'safe', state: false}) 
             updatePuzzleList({
                 type: 'SOLVE_PUZZLE',
-                complete: ['typewriter'],
-                newPuzzles: ['buttons']
+                complete: ['typewriter', 'filing'],
+                newPuzzles: ['telescope']
             })
             updateLocationImg()
         }
@@ -49,8 +50,8 @@ function TheTypewriter() {
         <>
             {puzzleSolved ? 
                 <PuzzleReward
-                    imgAlt='a hidden panel swinging open'
-                    text='A small panel in the wall swings open.'
+                    imgAlt='the telescope from the office'
+                    text='A small light turns on above the telescope. Maybe I should take a look.'
                 /> :
                 <TypewriterPuzzle setPuzzleSolved={setPuzzleSolved} />
             }

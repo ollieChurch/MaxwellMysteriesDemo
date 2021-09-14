@@ -37,7 +37,7 @@ function TheTelephone() {
             setUpdated(true)
             updatePuzzleList({
                 type: 'SOLVE_PUZZLE',
-                complete: ['telephone', 'certificate'],
+                complete: ['telephone', 'telescope', 'bookcase'],
                 newPuzzles: ['drawer'],
                 itemCollected: true
             })

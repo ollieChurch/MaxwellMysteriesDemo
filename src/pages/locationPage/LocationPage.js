@@ -30,7 +30,7 @@ function LocationPage() {
     return (
         <div className="pageContainer pageContainer-location">
             <GameHeader>
-                <p className='header_link header_link-landing' onClick={openMenu}>
+                <p className='header_link' onClick={openMenu}>
                     <i className="fas fa-cog"></i> options menu
                 </p> 
             </GameHeader>

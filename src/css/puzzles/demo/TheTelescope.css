@@ -1,0 +1,53 @@
+.telescopeContainer {
+    border-radius: 50%;
+    border: 10px groove goldenrod;
+    overflow: hidden;
+    width: 100%;
+    height: 400px;
+}
+
+.telescopeImg {
+    width: 100%;
+    height: 100%;
+}
+
+.puzzlePopUp_cntrls-telescope {
+    flex-direction: row;
+}
+
+.telescopeInput {
+    transform: rotate(90deg);
+    width: 50%;
+    appearance: unset;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 2px; 
+    background: black;
+    border-top: 3px inset black;
+    border-bottom: 3px inset black;
+    outline: none; 
+    cursor: pointer;
+    margin: .5em .5em;
+}
+
+.telescopeInput::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    border: 5px ridge gold;
+    box-shadow: 2px -2px 5px black;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    background: goldenrod;
+}
+
+.telescopeInput::-moz-range-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    border: 5px ridge gold;
+    box-shadow: 2px -2px 5px black;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    background: goldenrod;
+}

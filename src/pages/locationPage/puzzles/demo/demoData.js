@@ -1,11 +1,11 @@
 import TheTypewriter from './theTypewriter/TheTypewriter'
 import TheBookcase from './TheBookcase'
 import TheButtons from './theButtons/TheButtons'
-import TheFilingCabinet from './theFilingCabinet/TheFilingCabinet'
-import TheVoiceRecorder from './TheVoiceRecorder'
-import TheCertificate from './TheCertificate'
+import TheFilingCabinet from './TheFilingCabinet'
 import TheTelephone from './theTelephone/TheTelephone'
 import TheLockedDrawer from './TheLockedDrawer'
+import TheFlags from './TheFlags'
+import TheTelescope from './TheTelescope'
 
 const demoData = [
     {
@@ -15,23 +15,7 @@ const demoData = [
         puzzleVisible: true,
         puzzleLocked: false,
         component: <TheTypewriter />,
-        cluesAvailable: true,
-        clues: [
-            {
-                text: 'This is Typewriter clue 1'
-            },
-            {
-                text: 'This is Typewriter clue 2'
-            },
-            {
-                text: 'This is Typewriter clue 3',
-                image: 'https://via.placeholder.com/275'
-                
-            },
-            {
-                text: 'This is Typewriter solution'
-            }
-        ]
+        cluesAvailable: false
     },
     {
         name: 'The Bookcase',
@@ -45,11 +29,11 @@ const demoData = [
     {
         name: 'The Buttons',
         id: 'buttons',
-        sceneText: "A hidden button panel! Intriguing...",
-        puzzleVisible: false,
+        sceneText: "What a funny set of buttons, I wonder what they do...",
+        puzzleVisible: true,
         puzzleLocked: false,
         component: <TheButtons />,
-        cluesAvailable: false,
+        cluesAvailable: true,
         clues: [
             {
                 text: 'This is Buttons clue 1',
@@ -70,18 +54,33 @@ const demoData = [
         name: 'The Filing Cabinet',
         id: 'filing',
         sceneText: "Everything filed away in it's proper place",
-        puzzleVisible: true,
-        puzzleLocked: false,
-        component: <TheFilingCabinet />,
-        cluesAvailable: false
-    },
-    {
-        name: 'The Voice Recorder',
-        id: 'voiceRecorder',
-        sceneText: "The bookcase has moved to reveal a voice recorder",
         puzzleVisible: false,
         puzzleLocked: false,
-        component: <TheVoiceRecorder />,
+        component: <TheFilingCabinet />,
+        cluesAvailable: false,
+        clues: [
+            {
+                text: 'This is Filing Cabinet clue 1',
+                image: 'https://via.placeholder.com/275'
+            },
+            {
+                text: 'This is Filing Cabinet clue 2'
+            },
+            {
+                text: 'This is Filing Cabinet clue 3'
+            },
+            {
+                text: 'This is Filing Cabinet solution'
+            }
+        ]
+    },
+    {
+        name: 'The Telescope',
+        id: 'telescope',
+        sceneText: "Are we really alone in the universe?",
+        puzzleVisible: false,
+        puzzleLocked: false,
+        component: <TheTelescope />,
         cluesAvailable: false,
         clues: [
             {
@@ -90,28 +89,13 @@ const demoData = [
         ]
     },
     {
-        name: 'The Certificate',
-        id: 'certificate',
-        sceneText: "The Professor is very clever",
-        puzzleVisible: false,
+        name: 'The Flags',
+        id: 'flags',
+        sceneText: "A strange device hangs on the wall",
+        puzzleVisible: true,
         puzzleLocked: false,
-        component: <TheCertificate />,
-        cluesAvailable: false,
-        clues: [
-            {
-                text: 'This is Certificate clue 1'
-            },
-            {
-                text: 'This is Certificate clue 2',
-                image: 'https://via.placeholder.com/275'
-            },
-            {
-                text: 'This is Certificate clue 3'
-            },
-            {
-                text: 'This is Certificate solution'
-            }
-        ]
+        component: <TheFlags />,
+        cluesAvailable: false
     },
     {
         name: 'The Telephone',
@@ -120,26 +104,12 @@ const demoData = [
         puzzleVisible: true,
         puzzleLocked: false,
         component: <TheTelephone />,
-        cluesAvailable: false,
-        clues: [
-            {
-                text: 'This is Phone clue 1'
-            },
-            {
-                text: 'This is Phone clue 2'
-            },
-            {
-                text: 'This is Phone clue 3'
-            },
-            {
-                text: 'This is Phone solution'
-            }
-        ]
+        cluesAvailable: false
     },
     {
         name: 'The Locked Drawer',
         id: 'drawer',
-        sceneText: "This drawer is locked. It needs a key.",
+        sceneText: "A secret compartment. It needs a key.",
         specialIcon: 'fas fa-lock',
         puzzleVisible: true,
         puzzleLocked: true,
