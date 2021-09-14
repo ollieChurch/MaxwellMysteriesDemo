@@ -1,41 +1,34 @@
-import React, {useState, createContext, useEffect} from 'react'
+import {useState, createContext, useEffect} from 'react'
 import {useAudioPlayer} from 'react-use-audio-player'
 
-import Backbay_Lounge from '../audio/audioFiles/backgroundMusic/Backbay_Lounge.mp3'
-import Bass_Walker from '../audio/audioFiles/backgroundMusic/Bass_Walker.mp3'
-import Cool_Vibes from '../audio/audioFiles/backgroundMusic/Cool_Vibes.mp3'
-import Covert_Affair from '../audio/audioFiles/backgroundMusic/Covert_Affair.mp3'
-import Dances_Dames from '../audio/audioFiles/backgroundMusic/Dances_Dames.mp3'
-import Fast_Talkin from '../audio/audioFiles/backgroundMusic/Fast_Talkin.mp3'
-import Faster_Does_It from '../audio/audioFiles/backgroundMusic/Faster_Does_It.mp3'
+import Backbay_Lounge from '../audio/backgroundMusic/Backbay_Lounge.mp3'
+import Bass_Walker from '../audio/backgroundMusic/Bass_Walker.mp3'
+import Cool_Vibes from '../audio/backgroundMusic/Cool_Vibes.mp3'
+import Covert_Affair from '../audio/backgroundMusic/Covert_Affair.mp3'
+import Dances_Dames from '../audio/backgroundMusic/Dances_Dames.mp3'
+import Fast_Talkin from '../audio/backgroundMusic/Fast_Talkin.mp3'
+import Faster_Does_It from '../audio/backgroundMusic/Faster_Does_It.mp3'
 import George_Street_Shuffle from   
-    '../audio/audioFiles/backgroundMusic/George_Street_Shuffle.mp3'
-import Hot_Swing from '../audio/audioFiles/backgroundMusic/Hot_Swing.mp3'
-import I_Knew_a_Guy from '../audio/audioFiles/backgroundMusic/I_Knew_a_Guy.mp3'
-import In_Your_Arms from '../audio/audioFiles/backgroundMusic/In_Your_Arms.mp3'
+    '../audio/backgroundMusic/George_Street_Shuffle.mp3'
+import Hot_Swing from '../audio/backgroundMusic/Hot_Swing.mp3'
+import I_Knew_a_Guy from '../audio/backgroundMusic/I_Knew_a_Guy.mp3'
+import In_Your_Arms from '../audio/backgroundMusic/In_Your_Arms.mp3'
 import On_the_Cool_Side from 
-    '../audio/audioFiles/backgroundMusic/On_the_Cool_Side.mp3'
+    '../audio/backgroundMusic/On_the_Cool_Side.mp3'
 import Poppers_Prosecco from 
-    '../audio/audioFiles/backgroundMusic/Poppers_Prosecco.mp3'
-import Rollin_at_5 from '../audio/audioFiles/backgroundMusic/Rollin_at_5.mp3'
+    '../audio/backgroundMusic/Poppers_Prosecco.mp3'
+import Rollin_at_5 from '../audio/backgroundMusic/Rollin_at_5.mp3'
 import Shades_of_Spring from 
-    '../audio/audioFiles/backgroundMusic/Shades_of_Spring.mp3'
-import Sidewalk_Shade from '../audio/audioFiles/backgroundMusic/Sidewalk_Shade.mp3'
-import Spy_Glass from '../audio/audioFiles/backgroundMusic/Spy_Glass.mp3'
-import Spysome from '../audio/audioFiles/backgroundMusic/Spysome.mp3'
-import Walking_Along from '../audio/audioFiles/backgroundMusic/Walking_Along.mp3'
-
-import machineBackground from '../audio/audioFiles/backgroundMusic/machineBackground.mp3'
-
+    '../audio/backgroundMusic/Shades_of_Spring.mp3'
+import Sidewalk_Shade from '../audio/backgroundMusic/Sidewalk_Shade.mp3'
+import Spy_Glass from '../audio/backgroundMusic/Spy_Glass.mp3'
+import Spysome from '../audio/backgroundMusic/Spysome.mp3'
+import Walking_Along from '../audio/backgroundMusic/Walking_Along.mp3'
 
 const BackgroundMusicContext = createContext()
 
 function BackgroundMusicProvider({children}) {
     const [userMutedBackground, setUserMutedBackground] = useState(false)
-    const [isBackgroundPlaying, setIsBackgroundPlaying] = useState(false)
-    const [fading, setFading] = useState(false) //possible options: OUT / UP / false
-    const maxVolume = 0.2
-    const [staticVol, setStaticVol] = useState(maxVolume)
     const [playlist] = useState([
         Backbay_Lounge, //File size more than 2mb
         Bass_Walker,
@@ -57,7 +50,7 @@ function BackgroundMusicProvider({children}) {
         Spysome,
         Walking_Along
     ])
-    const {stop, play, volume, load} = useAudioPlayer()
+    const {stop, play, load, playing} = useAudioPlayer()
     
     function randomTrack() {
         return Math.floor(
@@ -71,6 +64,7 @@ function BackgroundMusicProvider({children}) {
             src: playlist[trackNum],
             autoplay: true,
             format: 'mp3',
+            volume: 0.2,
             onend: () => {
                 const nextSong = trackNum < (playlist.length -1) ?
                       trackNum + 1 : 0
@@ -79,75 +73,25 @@ function BackgroundMusicProvider({children}) {
         })
     }
     
-    function playMachineBackground() {
-        if (!userMutedBackground) {
-            toggleMuteBackground()
-            load({
-                src: machineBackground,
-                autoplay: true,
-                format: 'mp3',
-                loop: true
-            })
-        }
-    }
-            
     function toggleMuteBackground() {
         userMutedBackground ? play() : stop() 
         setUserMutedBackground(prevState => !prevState)
     }
     
-    function fadeBackgroundAudio(action) {
-        action ? setFading(action) : setFading(false)        
-    }
-
-    function operateFade() {
-        if (fading === 'OUT') {
-            if (volume() > 0.1) {
-                const minusVol = volume() - 0.01
-                volume(minusVol)
-                setStaticVol(minusVol)
-            } else {
-                volume(0)
-                setFading(false)
-            }
-        } else if (fading === 'UP') {
-            if (volume() < maxVolume) {
-                const addVol = volume() + 0.01
-                volume(addVol)
-                setStaticVol(addVol)
-            } else (
-                setFading(false)
-            )
-        }
-    }
-
     useEffect(() => {
-        if (fading) {
-            const timer = setTimeout(() => operateFade(), 250)
-            return () => clearTimeout(timer)
+        if (playing === userMutedBackground) {
+            console.log('music use effect')
+            !userMutedBackground && loadTrack()
         }
     // eslint-disable-next-line
-    }, [fading, staticVol])
-    
-    
-    useEffect(() => {
-        volume() > maxVolume && volume(maxVolume) 
-    }, [volume, maxVolume])
-    
-    useEffect(() => {
-        if (isBackgroundPlaying === userMutedBackground) {
-            setIsBackgroundPlaying(!userMutedBackground)
-        }
-    }, [userMutedBackground, isBackgroundPlaying, setIsBackgroundPlaying])
+    }, [userMutedBackground])
     
     const context = {
         loadTrack,
-        isBackgroundPlaying,
+        playing,
         userMutedBackground,
         toggleMuteBackground,
-        fadeBackgroundAudio,
-        stop,
-        playMachineBackground
+        stop
     }
     
     return (
