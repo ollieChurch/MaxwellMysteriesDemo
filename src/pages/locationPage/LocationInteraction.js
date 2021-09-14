@@ -1,9 +1,5 @@
 import {useState, useContext} from 'react'
 import '../../css/puzzles/office/DemoPuzzleMarkers.css'
-import '../../css/puzzles/library/LibraryPuzzleMarkers.css'
-import '../../css/puzzles/laboratory/laboratoryPuzzleMarkers.css'
-import '../../css/puzzles/fourJokers/fourJokersPuzzleMarkers.css'
-import '../../css/puzzles/lastStand/lastStandPuzzleMarkers.css'
 
 import {LocationPuzzlesContext} from '../../context/LocationPuzzlesContext'
 import {UnmountContextProvider} from '../../context/UnmountContext'
