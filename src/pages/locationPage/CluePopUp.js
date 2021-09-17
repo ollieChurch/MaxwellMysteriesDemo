@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import {useContext} from 'react'
 
 import {LocationPuzzlesContext} from '../../context/LocationPuzzlesContext'
 import PaperPanel from '../../components/PaperPanel'

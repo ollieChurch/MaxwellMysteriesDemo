@@ -1,9 +1,6 @@
-import React from 'react'
-// import lockedDrawerImg from
+import lockedDrawerImg from '../../../../images/puzzles/demo/finalLetter.png'
 
-function TheLockedDrawer() {
-    const lockedDrawerImg = 'https://via.placeholder.com/600x500'    
-    
+function TheLockedDrawer() {    
     return (
         <div className="puzzleContainer">
             <img className="puzzlePopUp_img" src={lockedDrawerImg} alt="the bookcase from the office" height='50%'/> 

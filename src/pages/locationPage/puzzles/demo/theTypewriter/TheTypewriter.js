@@ -1,8 +1,9 @@
-import React, {useState, useEffect, useContext} from 'react'
+import {useState, useEffect, useContext} from 'react'
 import {useAudioPlayer, useAudioPosition} from 'react-use-audio-player'
 import '../../../../../css/puzzles/office/TheTypewriter.css'
 
 import typewriterSFX from '../../../../../audio/sfx/typewriterSFX.mp3'
+import telescopeImg from '../../../../../images/puzzles/demo/officeTelescope.png'
 
 import {UnmountContext} from '../../../../../context/UnmountContext'
 import {LocationPuzzlesContext} from '../../../../../context/LocationPuzzlesContext'
@@ -50,6 +51,7 @@ function TheTypewriter() {
         <>
             {puzzleSolved ? 
                 <PuzzleReward
+                    imgSrc={telescopeImg}
                     imgAlt='the telescope from the office'
                     text='A small light turns on above the telescope. Maybe I should take a look.'
                 /> :

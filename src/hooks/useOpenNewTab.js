@@ -4,7 +4,7 @@ function useOpenNewTab() {
         switch(action) {
             case 'PURCHASE': {
                 return window.open(
-                    'https://paradoxparlours.com/escape-rooms/online'
+                    'https://boxfile.io/shop/paradox-parlours'
                 )
             }
 

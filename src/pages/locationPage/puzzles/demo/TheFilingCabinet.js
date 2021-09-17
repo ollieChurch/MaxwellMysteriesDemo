@@ -1,4 +1,4 @@
-import pageImg from '../../../../images/puzzles/demo/bookPage.jpg'
+import pageImg from '../../../../images/puzzles/demo/bookPage.png'
 
 function TheFilingCabinet() {
     return (

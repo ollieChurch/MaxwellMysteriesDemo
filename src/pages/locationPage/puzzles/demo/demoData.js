@@ -7,6 +7,11 @@ import TheLockedDrawer from './TheLockedDrawer'
 import TheFlags from './TheFlags'
 import TheTelescope from './TheTelescope'
 
+import chessSolution from '../../../../images/clues/chessSolution.png'
+import telescopeSolution from '../../../../images/puzzles/demo/stars.png'
+import phoneSolution from '../../../../images/clues/phoneSolution.png'
+
+
 const demoData = [
     {
         name: 'The Typewriter',
@@ -36,17 +41,18 @@ const demoData = [
         cluesAvailable: true,
         clues: [
             {
-                text: 'This is Buttons clue 1',
-                image: 'https://via.placeholder.com/275'
+                text: 'Each button has a different chess symbol on it. Have you seen those symbols anywhere else?'
             },
             {
-                text: 'This is Buttons clue 2'
+                text: "Check out the secret compartment in the professor's desk. Can the machine inside help you with which symbols to press?"
             },
             {
-                text: 'This is Buttons clue 3'
+                text: 'The machine inside the desk shows you 4 chess symbols in an order indicated by the 4 lights. Press the buttons in that order. If you ask for another hint on this puzzle you will receive the solution.'
             },
             {
-                text: 'This is Buttons solution'
+                text: 'Press the buttons in this order.',
+                image: chessSolution
+                
             }
         ]
     },
@@ -60,17 +66,16 @@ const demoData = [
         cluesAvailable: false,
         clues: [
             {
-                text: 'This is Filing Cabinet clue 1',
-                image: 'https://via.placeholder.com/275'
+                text: 'The page in the filing cabinet has a drawing of a typewriter in the corner. Maybe it can help us find a password to type on the typewriter.'
             },
             {
-                text: 'This is Filing Cabinet clue 2'
+                text: "Some of the letters on the book's page seem highlighted in red. Can you use that to find a password for the typewriter?"
             },
             {
-                text: 'This is Filing Cabinet clue 3'
+                text: 'Take the red letters in order to form a word for the typewriter. If you ask for another hint on this puzzle you will receive the solution.'
             },
             {
-                text: 'This is Filing Cabinet solution'
+                text: 'The highlighted letters spell ASTROLOGY. Type this into the typewriter.'
             }
         ]
     },
@@ -84,14 +89,25 @@ const demoData = [
         cluesAvailable: false,
         clues: [
             {
-                text: 'Listen to the voice recording carefully. Can you use what the Professor is saying to help with the filing cabinet?'
+                text: "Adjust the sliders until the telescope's image comes into focus. Can this help you find a number code for the telephone?"
+            },
+            {
+                text: "When in focus you can see this image. Can you find something else to help you with the order?",
+                image: telescopeSolution
+            },
+            {
+                text: "To open the telephone, dial the numbers from the telescope in the order shown on the books. If you ask for another hint on this puzzle you will receive the solution."
+            },
+            {
+                text: "Dial the numbers on the telephone in this order: 1 8 3 5 6.",
+                image: phoneSolution
             }
         ]
     },
     {
         name: 'The Flags',
         id: 'flags',
-        sceneText: "A strange device hangs on the wall",
+        sceneText: "A secret panel in the side of the desk reveals a mysterious machine",
         puzzleVisible: true,
         puzzleLocked: false,
         component: <TheFlags />,
@@ -109,7 +125,7 @@ const demoData = [
     {
         name: 'The Locked Drawer',
         id: 'drawer',
-        sceneText: "A secret compartment. It needs a key.",
+        sceneText: "This picture is fixed to the wall, and it has a small keyhole!",
         specialIcon: 'fas fa-lock',
         puzzleVisible: true,
         puzzleLocked: true,
@@ -117,16 +133,7 @@ const demoData = [
         cluesAvailable: false,
         clues: [
             {
-                text: 'This is Locked Drawer clue 1'
-            },
-            {
-                text: 'This is Locked Drawer clue 2'
-            },
-            {
-                text: 'This is Locked Drawer clue 3'
-            },
-            {
-                text: 'This is Locked Drawer solution'
+                text: 'Click on the key in your inventory and then select the padlock to use it in the keyhole.'
             }
         ]
     }

@@ -1,7 +1,7 @@
-import React, {useState, useEffect} from 'react'
-
+import {useState, useEffect} from 'react'
 import useAnswerIndicators from '../../../../../hooks/useAnswerIndicators'
 import answerData from '../../answerData'
+import BrassPanel from '../../../../../components/BrassPanel'
 
 function ButtonsPuzzle({setPuzzleSolved}) {
     const [answer] = useState(answerData.buttons)
@@ -30,7 +30,7 @@ function ButtonsPuzzle({setPuzzleSolved}) {
         
     return (
         <>
-            <div className='buttonsBox'>
+            <BrassPanel extraClasses='buttonsBox'>
                 {buttonSymbols.map((symbol, index) => {
                     return (
                         <button 
@@ -42,7 +42,7 @@ function ButtonsPuzzle({setPuzzleSolved}) {
                         </button>
                     )
                 })}
-            </div>
+            </BrassPanel>
 
             <div className='indicatorBox'>
                 {indicatorFilled.map((indicator, index) => {

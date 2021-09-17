@@ -10,18 +10,18 @@ function LandingMainText({gameState}) {
     if (gameState === 'winGame') {
         titleText = 'You Solved The Case!'
         bodyText = [
-            'Professor Foxworth and his research are safe thanks to your efforts. Well done on completing The Case Of The Kidnapped Professor.',
+            'Thanks to you we know The Professor is safe! Well done on completing this demo.',
 
-            'As one case closes another opens. P.I. Larry Maxwell needs your help on more investigations. There is a diamond that has disappeared from the City Museum and the trial of Vince Baxter is due to start any day, open and shut case, provided the evidence makes it to the court.',
+            'There are hours of fun to be had helping Larry Maxwell on his full cases; The Disappearing Diamond and The Kidnapped Professor, with many more to come.',
 
-            'You can find out about these, plus all the other incredible online and real world escape games Paradox Parlours has to offer by visiting the website.',
+            'You can find out more, and purchase a game at Paradox Parlours.',
 
             'See you at the next mystery!'
         ]
     } else {
         titleText = 'Instructions - Read Me First'
         bodyText = [
-            'Private Investigator Larry Maxwell needs your help on the latest case and there is no time to lose!',
+            'Private Investigator Larry Maxwell needs your help on the latest case! Professor Foxworth has gone missing and his office turned over by underworld goons. Can you search the mess for clues?',
 
             "This is a playable demo for the Maxwell Mysteries play-at-home puzzle game series. Everything you need to play this mini case will be on screen, though a pencil and paper may be handy.",
 

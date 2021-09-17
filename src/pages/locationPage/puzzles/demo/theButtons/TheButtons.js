@@ -1,5 +1,7 @@
-import React, {useState, useEffect, useContext} from 'react'
+import { useState, useEffect, useContext } from 'react'
 import '../../../../../css/puzzles/office/TheButtons.css'
+
+import filingImg from '../../../../../images/puzzles/demo/filingCabinet.png'
 
 import {LocationPuzzlesContext} from '../../../../../context/LocationPuzzlesContext'
 
@@ -27,6 +29,7 @@ function TheButtons() {
         <div className="puzzleContainer">
             {puzzleSolved ?
                 <PuzzleReward
+                    imgSrc={filingImg}
                     imgAlt="the filing cabinet from the office"
                     text="Across the room, the filing cabinet suddenly springs open."
                 /> :
