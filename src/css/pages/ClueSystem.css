@@ -82,7 +82,8 @@
 }
 
 .cluePopUp_clueImg {
-    grid-area: clueImag
+    grid-area: clueImag;
+    max-width: 100%;
 }
 
 @media(max-width: 1200px) { 
