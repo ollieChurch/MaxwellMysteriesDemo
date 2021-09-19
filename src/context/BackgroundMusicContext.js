@@ -28,7 +28,7 @@ import Walking_Along from '../audio/backgroundMusic/Walking_Along.mp3'
 const BackgroundMusicContext = createContext()
 
 function BackgroundMusicProvider({children}) {
-    const [userMutedBackground, setUserMutedBackground] = useState(false)
+    const [userMutedBackground, setUserMutedBackground] = useState(true)
     const [playlist] = useState([
         Backbay_Lounge, //File size more than 2mb
         Bass_Walker,
