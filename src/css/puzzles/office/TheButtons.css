@@ -1,6 +1,4 @@
 .buttonsBox {
-    /* border: inset 5px rgba(110, 78, 25, 1); */
-    /* background: rgba(110, 78, 25, 0.45); */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1em;
