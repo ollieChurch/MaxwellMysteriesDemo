@@ -107,7 +107,7 @@ const demoData = [
     {
         name: 'The Flags',
         id: 'flags',
-        sceneText: "A secret panel in the side of the desk reveals a mysterious machine",
+        sceneText: "A secret panel in the side of the desk",
         puzzleVisible: true,
         puzzleLocked: false,
         component: <TheFlags />,
