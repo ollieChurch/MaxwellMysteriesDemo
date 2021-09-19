@@ -74,13 +74,13 @@ function BackgroundMusicProvider({children}) {
     }
     
     function toggleMuteBackground() {
-        userMutedBackground ? play() : stop() 
+        userMutedBackground ? play() : stop()
+        localStorage.setItem('muteMusic', !userMutedBackground)
         setUserMutedBackground(prevState => !prevState)
     }
     
     useEffect(() => {
         if (playing === userMutedBackground) {
-            console.log('music use effect')
             !userMutedBackground && loadTrack()
         }
     // eslint-disable-next-line

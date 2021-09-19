@@ -7,6 +7,7 @@ function PlayerStatsProvider({children}) {
     })
     
     function updatePlayerStats(action) {
+        localStorage.setItem(action.name, action.newState)
         setPlayerStats(prevStats => {
             return {
                 ...prevStats,

@@ -1,4 +1,4 @@
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import '../../css/pages/LandingPage.css'
 import '../../css/animations.css'
 
@@ -19,10 +19,23 @@ import Website from './Website'
 import StartGame from './StartGame'
 
 function LandingPage() {
-    const {playerStats} = useContext(PlayerStatsContext)
+    const {playerStats, updatePlayerStats} = useContext(PlayerStatsContext)
     const {gameState} = playerStats
     const {openTab} = useOpenNewTab()
     const {isPopUpOpen, togglePopUp, isMenuOpen, openMenu} = useTogglePopUp()
+
+    useEffect(() => {
+        const savedGameState = localStorage.getItem('gameState')
+
+        if (savedGameState) {
+            updatePlayerStats({name: 'gameState', newState: savedGameState})
+        } else {
+            localStorage.setItem('gameState', 'newGame')
+            localStorage.setItem('muteMusic', false)
+        }
+        
+    // eslint-disable-next-line
+    }, [])
         
     return (
         <div className="pageContainer pageContainer-landing">
