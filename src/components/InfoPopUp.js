@@ -31,7 +31,7 @@ function InfoPopUp({children, isPopUpOpen, togglePopUp}) {
             {isPopUpOpen &&
                 <div className="infoPopUpContainer">
                     <div className="infoPopUp_background" onClick={togglePopUp}></div>
-                    <PaperPanel extraClasses="infoPopUp">
+                    <PaperPanel extraClasses="infoPopUp infoPopUp-musicAttributon">
                         <button className="infoPopUp_close" onClick={togglePopUp}>X</button>
                         {children}
                     </PaperPanel>

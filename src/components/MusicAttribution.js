@@ -2,7 +2,7 @@ import React from 'react'
 
 function MusicAttribution() {
     return (
-        <>
+        <div className='infoPopUp-musicAttribution'>
             <p className="infoPopUp_text">
                 "Cool Vibes", "Sidewalk Shade", "Spy Glass", "Backbay Lounge", "Poppers and Prosecco", "Deadly Roulette", "In Your Arms", "Rollin at 5", "George Street Shuffle", "Bass Walker", "Covert Affair", "Faster Does It", "Dances and Dames", "Fast Talkin", "Hot Swing", "I Knew A Guy", "On The Cool Side", "Shades Of Spring", "Walking Along" - by Kevin MacLeod (incompetech.com). Licensed under Creative Commons: By Attribution 4.0 License.
             </p>
@@ -21,7 +21,7 @@ function MusicAttribution() {
             >
                 Link To License
             </a>
-        </>
+        </div>
     )
 }
 
