@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import '../../../../css/puzzles/demo/TheTelescope.css'
 import starsImg from '../../../../images/puzzles/demo/stars.png'
+import BrassPanel from '../../../../components/BrassPanel'
 
 function TheTelescope() {
     const [firstInput, setFirstInput] = useState(40)
@@ -11,7 +12,7 @@ function TheTelescope() {
 
     return (
         <div className='puzzleContainer'>
-            <div className='puzzlePopUp_cntrls puzzlePopUp_cntrls-telescope'>
+            <BrassPanel extraClasses='puzzlePopUp_cntrls puzzlePopUp_cntrls-telescope'>
                 <input 
                     type='range' 
                     className='telescopeInput'
@@ -32,7 +33,7 @@ function TheTelescope() {
                     min='-100'
                     max='5'
                 />
-            </div>
+            </BrassPanel>
             <p className='puzzlePopUp_text'> If only I could focus...</p>
         </div>
     )

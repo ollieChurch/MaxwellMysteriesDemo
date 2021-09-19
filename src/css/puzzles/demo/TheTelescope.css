@@ -3,7 +3,9 @@
     border: 10px groove goldenrod;
     overflow: hidden;
     width: 100%;
-    height: 400px;
+    aspect-ratio: 1 / 1;
+    margin-top: 20px;
+    background: black;
 }
 
 .telescopeImg {
@@ -13,6 +15,7 @@
 
 .puzzlePopUp_cntrls-telescope {
     flex-direction: row;
+    padding: 1em;
 }
 
 .telescopeInput {
@@ -27,7 +30,7 @@
     border-bottom: 3px inset black;
     outline: none; 
     cursor: pointer;
-    margin: .5em .5em;
+    align-self: center;
 }
 
 .telescopeInput::-webkit-slider-thumb {
@@ -50,4 +53,19 @@
     height: 40px;
     width: 40px;
     background: goldenrod;
+}
+
+@media(max-width:1000px) {
+    .puzzlePopUp_cntrls-telescope {
+        flex-direction: column;
+    }
+
+    .telescopeContainer {
+        height: 100%;
+        width: auto;
+    }
+
+    .telescopeInput {
+        transform: rotate(0deg);
+    }
 }
