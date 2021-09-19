@@ -99,7 +99,7 @@ const demoData = [
                 text: "To open the telephone, dial the numbers from the telescope in the order shown on the books. If you ask for another hint on this puzzle you will receive the solution."
             },
             {
-                text: "Dial the numbers on the telephone in this order: 1 8 3 5 6.",
+                text: "Dial the numbers on the telephone in this order: 13856.",
                 image: phoneSolution
             }
         ]
