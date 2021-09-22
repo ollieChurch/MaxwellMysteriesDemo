@@ -123,7 +123,7 @@ const demoData = [
         cluesAvailable: false
     },
     {
-        name: 'The Locked Drawer',
+        name: 'The Locked Painting',
         id: 'drawer',
         sceneText: "This picture is fixed to the wall, and it has a small keyhole!",
         specialIcon: 'fas fa-lock',
