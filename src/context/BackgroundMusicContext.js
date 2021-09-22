@@ -28,7 +28,8 @@ import Walking_Along from '../audio/backgroundMusic/Walking_Along.mp3'
 const BackgroundMusicContext = createContext()
 
 function BackgroundMusicProvider({children}) {
-    const [userMutedBackground, setUserMutedBackground] = useState(true)
+    const savedState = localStorage.getItem('muteMusic')
+    const [userMutedBackground, setUserMutedBackground] = useState(savedState === 'true' ? true : false)
     const [playlist] = useState([
         Backbay_Lounge, //File size more than 2mb
         Bass_Walker,
@@ -75,7 +76,7 @@ function BackgroundMusicProvider({children}) {
     
     function toggleMuteBackground() {
         userMutedBackground ? play() : stop()
-        localStorage.setItem('muteMusic', !userMutedBackground)
+        localStorage.getItem('muteMusic') && localStorage.setItem('muteMusic', playing)
         setUserMutedBackground(prevState => !prevState)
     }
     

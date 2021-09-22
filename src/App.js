@@ -8,7 +8,8 @@ import {PuzzleChangeProvider} from './context/PuzzleChangeContext'
 import LandingPage from './pages/landingPage/LandingPage'
 import LocationPage from './pages/locationPage/LocationPage'
 
-function App() {        
+
+function App() {
     return (
         <BackgroundMusicProvider>
             <Switch>
