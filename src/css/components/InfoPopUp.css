@@ -17,6 +17,7 @@
     
     width: 80%;
     min-height: 30%;
+    max-height: 90vh;
     
     display: flex;
     flex-direction: column;
@@ -32,7 +33,6 @@
 }
 
 .infoPopUp-musicAttribution {
-    max-height: 100vh;
     overflow-y: scroll;
 }
 
