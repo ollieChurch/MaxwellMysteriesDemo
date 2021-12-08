@@ -4,7 +4,7 @@ This is a demo for the Maxwell Mysteries *play-at-home* puzzle game series. You 
 ## About Maxwell Mysteries
 During the lockdowns of 2020 and 2021, after being placed on furlough, I needed a project. Having worked solidly in the escape game puzzle world for the last 3 years, me and my partner set to work creating a puzzle game which could be played at home. We created the puzzles together, she saw to the artwork and I focussed on the web development. At the time my frontend skills were relatively fresh, especially my work with React, but it was an excellent challenge to keep us busy and I learnt a lot creating that first game.
 
-Our first in the Maxwell Mysteries series was released in early November 2020 and it's follow up The Kidnapped Professor is in its final stages of release now in November 2021. Both games are a combination of printed and digital puzzles that require all the skills of a real life escape room to complete. You can read a review of the first game [here](https://www.reviewtheroom.co.uk/paradox-parlours-maxwell-mysteries-the-disappearing-diamond-play-at-home/)
+Our first in the Maxwell Mysteries series was released in early November 2020 and it's follow up The Kidnapped Professor was released early December 2021. Both games are a combination of printed and digital puzzles that require all the skills of a real life escape room to complete. You can read a review of the first game [here](https://www.reviewtheroom.co.uk/paradox-parlours-maxwell-mysteries-the-disappearing-diamond-play-at-home/)
 
 Both games consist of 2+ hours of puzzling content over 5 levels. Player progress is saved to the database at the end of each level.
 
